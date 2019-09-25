@@ -70,7 +70,7 @@ namespace QuanLyKhachSan.GUI
     }
 
 
-    /*
+   
       /* 
      
       public partial class frmHome : Form
@@ -451,5 +451,5 @@ namespace QuanLyKhachSan.GUI
         }
     }
      */
-     */
+     
 }
