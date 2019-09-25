@@ -323,6 +323,69 @@ namespace QuanLyKhachSan.GUI
             initData(query, showDataRoom);
             string query = "SELECT Details.Name as [Tên Phòng] , dbo.ROOMTYPE.Name as [Loại Phòng], dbo.ROOMTYPE.Price as [Giá] , dbo.ROOMTYPE.LimitPerson as [Tối đa], dbo.STATUSROOM.Name as [Tình trạng] FROM dbo.ROOM , dbo.ROOMTYPE , dbo.STATUSROOM WHERE IDRoomType = ROOMTYPE.ID AND IDStatusRoom = STATUSROOM.ID";
             initData(query, showDetails);
+
+          if(check_Customer(txt_CMND.Text.Trim())==1)
+                {
+                    try
+                    {
+                        query = "USP_InsertCustomer_";
+                        using (conn = new SqlConnection(cnn.getConnectionString(frmLogin.checkConnectionString)))
+                        {
+                            conn.Open();
+                            cmd = new SqlCommand(query, conn);
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@idCard", txt_CMND.Text);
+                            cmd.Parameters.AddWithValue("@name", txt_HoTen.Text);
+                            cmd.Parameters.AddWithValue("@idCustomerType",Convert.ToInt32(1));
+                            cmd.Parameters.AddWithValue("@dateOfBirth", dtp_NgaySinh.Value);
+                            cmd.Parameters.AddWithValue("@address", txt_DiaChi.Text);
+                            cmd.Parameters.AddWithValue("@phoneNumber", Convert.ToInt32(txt_SDT.Text));
+                            cmd.Parameters.AddWithValue("@sex", kh_sex);
+                            cmd.Parameters.AddWithValue("@nationality", txt_QuocTich.Text.Trim());
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                            kh_ID = getId();
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Thông tin khách hàng chưa đúng");
+                    }
+                    
+                }
+                else
+                {
+                    kh_ID = check_Customer(txt_CMND.Text.Trim());
+                }
+                
+
+                string id_Room = showDataRoom.Rows[index-1].Cells["ID"].Value.ToString();
+                try
+                {
+                    using (conn = new SqlConnection(cnn.getConnectionString(frmLogin.checkConnectionString)))
+                    {
+                        query = "insert_BookRoom";
+                        conn.Open();
+                        cmd = new SqlCommand(query, conn);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@IDRoom", Convert.ToInt32(id_Room));
+                        cmd.Parameters.AddWithValue("@IDCustomer", kh_ID);
+                        cmd.Parameters.AddWithValue("@Date_Checkin", Date_CheckIn.Value);
+                        cmd.Parameters.AddWithValue("@Date_checkout", date_CheckOut.Value);
+                        cmd.Parameters.AddWithValue("@Date_book", date_CheckOut.Value);
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        MessageBox.Show("Đặt phòng thành công!");
+                        load();
+                    }
+                }
+
+                catch
+                {
+                    MessageBox.Show("Đặt phòng thất bại!");
+                }
+                }
+            }
         }
 
 
