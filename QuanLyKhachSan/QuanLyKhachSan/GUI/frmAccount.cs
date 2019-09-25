@@ -315,6 +315,16 @@ namespace QuanLyKhachSan.GUI
             initData(query, showDataRoom);
         }
 
+         private void btn_Syn_Click2(object sender, EventArgs e)
+        {
+            tc_Menu_second.SelectedTab = tab1Home;
+            tc_Content_Seclect.SelectedTab = tabHome;
+            string query = "SELECT ROOM.Name as [Tên Phòng] , dbo.ROOMTYPE.Name as [Loại Phòng], dbo.ROOMTYPE.Price as [Giá] , dbo.ROOMTYPE.LimitPerson as [Tối đa], dbo.STATUSROOM.Name as [Tình trạng] FROM dbo.ROOM , dbo.ROOMTYPE , dbo.STATUSROOM WHERE IDRoomType = ROOMTYPE.ID AND IDStatusRoom = STATUSROOM.ID";
+            initData(query, showDataRoom);
+            string query = "SELECT Details.Name as [Tên Phòng] , dbo.ROOMTYPE.Name as [Loại Phòng], dbo.ROOMTYPE.Price as [Giá] , dbo.ROOMTYPE.LimitPerson as [Tối đa], dbo.STATUSROOM.Name as [Tình trạng] FROM dbo.ROOM , dbo.ROOMTYPE , dbo.STATUSROOM WHERE IDRoomType = ROOMTYPE.ID AND IDStatusRoom = STATUSROOM.ID";
+            initData(query, showDetails);
+        }
+
 
         private void btn_Bill_Click(object sender, EventArgs e)
         {
