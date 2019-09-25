@@ -417,23 +417,7 @@ namespace QuanLyKhachSan.GUI
             fa.Show();
         }
 
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
-        {
-            DataTable data_phong = new DataTable();
-            using (conn = new SqlConnection(cnn.getConnectionString(1)))
-            {
-                conn.Open();
-                query = "DS_Phong";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                adap = new SqlDataAdapter(cmd);
-                adap.Fill(data_phong);
-                showDataRoom.DataSource = data_phong;
-                conn.Close();
-
-
-            }
-        }
+       
     }
      */
      */
