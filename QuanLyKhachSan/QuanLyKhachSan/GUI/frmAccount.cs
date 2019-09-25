@@ -399,24 +399,7 @@ namespace QuanLyKhachSan.GUI
             frmBookRoom fbr = new frmBookRoom();
             fbr.Show();
         }
-
-        private void btn_checkInRoom_Click(object sender, EventArgs e)
-        {
-            frmCheckInRoom fci = new frmCheckInRoom();
-            fci.Show();
-        }
-
-        private void btn_exit_Click(object sender, EventArgs e)
-        {
-            Environment.Exit(0);
-        }
-
-        private void btn_Account_Click(object sender, EventArgs e)
-        {
-            frmAccount fa = new frmAccount();
-            fa.Show();
-        }
-
+        
        
     }
      */
