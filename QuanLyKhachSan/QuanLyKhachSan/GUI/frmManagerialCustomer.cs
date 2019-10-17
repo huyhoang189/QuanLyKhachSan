@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,7 +75,7 @@ namespace QuanLyKhachSan.GUI
             DataTable data = connectionTable(frmManagerialCustomer.IDcart);
             makhachhang.Text = data.Rows[0]["ID"].ToString();
             Name.Text = data.Rows[0]["Name"].ToString();
-
+            DateTime date;
             string gioitinh = data.Rows[0]["Sex"].ToString();
             if (gioitinh == "Nam")
             {
@@ -90,7 +91,12 @@ namespace QuanLyKhachSan.GUI
             diachi.Text = data.Rows[0]["Address"].ToString();
             CMND.Text = data.Rows[0]["IDCard"].ToString();
             quoctich.Text = data.Rows[0]["Nationality"].ToString();
-            ngaysinh.Text = data.Rows[0]["DateOfBirth"].ToString();
+          
+            string temp = data.Rows[0]["DateOfBirth"].ToString();
+            int n = temp.Length - 1;
+            int n2 = temp.IndexOf(" ");
+            string temp1 = temp.Substring(0,n2);
+            ngaysinh_kh.Value= DateTime.ParseExact(temp1, "M/d/yyyy", CultureInfo.InvariantCulture);
         }
     }
 }
