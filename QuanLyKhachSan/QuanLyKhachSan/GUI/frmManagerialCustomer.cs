@@ -75,8 +75,7 @@ namespace QuanLyKhachSan.GUI
             DataTable data = connectionTable(frmManagerialCustomer.IDcart);
             makhachhang.Text = data.Rows[0]["ID"].ToString();
             Name.Text = data.Rows[0]["Name"].ToString();
-            DateTime date;
-            string gioitinh = data.Rows[0]["Sex"].ToString();
+            string gioitinh = data.Rows[0]["Sex"].ToString().TrimEnd();
             if (gioitinh == "Nam")
             {
                 Nam.Checked = true;
@@ -93,7 +92,6 @@ namespace QuanLyKhachSan.GUI
             quoctich.Text = data.Rows[0]["Nationality"].ToString();
           
             string temp = data.Rows[0]["DateOfBirth"].ToString();
-            int n = temp.Length - 1;
             int n2 = temp.IndexOf(" ");
             string temp1 = temp.Substring(0,n2);
             ngaysinh_kh.Value= DateTime.ParseExact(temp1, "M/d/yyyy", CultureInfo.InvariantCulture);
