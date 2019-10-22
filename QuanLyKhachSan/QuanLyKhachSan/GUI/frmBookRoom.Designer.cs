@@ -45,12 +45,13 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_MaDatPhong = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
-            this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.showDataRoom = new Guna.UI.WinForms.GunaDataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.Nu = new System.Windows.Forms.RadioButton();
-            this.Nam = new System.Windows.Forms.RadioButton();
+            this.txt_SDT = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
+            this.dtp_NgaySinh = new Guna.UI.WinForms.GunaDateTimePicker();
+            this.rd_female = new System.Windows.Forms.RadioButton();
+            this.rd_male = new System.Windows.Forms.RadioButton();
             this.gunaLabel10 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
             this.txt_QuocTich = new Guna.UI.WinForms.GunaTextBox();
@@ -66,9 +67,6 @@
             this.btn_DatPhong = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txt_user = new Guna.UI.WinForms.GunaTextBox();
-            this.dtp_NgaySinh = new Guna.UI.WinForms.GunaDateTimePicker();
-            this.txt_SDT = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaLabel12 = new Guna.UI.WinForms.GunaLabel();
             this.panel_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -211,8 +209,6 @@
             // 
             this.groupBox1.Controls.Add(this.txt_MaDatPhong);
             this.groupBox1.Controls.Add(this.gunaLabel11);
-            this.groupBox1.Controls.Add(this.bunifuFlatButton6);
-            this.groupBox1.Controls.Add(this.bunifuFlatButton5);
             this.groupBox1.Controls.Add(this.showDataRoom);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
@@ -237,7 +233,7 @@
             this.txt_MaDatPhong.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_MaDatPhong.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_MaDatPhong.ForeColor = System.Drawing.Color.Black;
-            this.txt_MaDatPhong.Location = new System.Drawing.Point(100, 367);
+            this.txt_MaDatPhong.Location = new System.Drawing.Point(92, 386);
             this.txt_MaDatPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txt_MaDatPhong.Name = "txt_MaDatPhong";
             this.txt_MaDatPhong.PasswordChar = '\0';
@@ -249,81 +245,11 @@
             this.gunaLabel11.AutoSize = true;
             this.gunaLabel11.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaLabel11.Location = new System.Drawing.Point(97, 341);
+            this.gunaLabel11.Location = new System.Drawing.Point(88, 350);
             this.gunaLabel11.Name = "gunaLabel11";
             this.gunaLabel11.Size = new System.Drawing.Size(120, 23);
             this.gunaLabel11.TabIndex = 39;
             this.gunaLabel11.Text = "Mã đặt phòng";
-            // 
-            // bunifuFlatButton6
-            // 
-            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.bunifuFlatButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
-            this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton6.BorderRadius = 0;
-            this.bunifuFlatButton6.ButtonText = "Hủy phòng";
-            this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.Iconimage = null;
-            this.bunifuFlatButton6.Iconimage_right = null;
-            this.bunifuFlatButton6.Iconimage_right_Selected = null;
-            this.bunifuFlatButton6.Iconimage_Selected = null;
-            this.bunifuFlatButton6.IconMarginLeft = 0;
-            this.bunifuFlatButton6.IconMarginRight = 0;
-            this.bunifuFlatButton6.IconRightVisible = false;
-            this.bunifuFlatButton6.IconRightZoom = 0D;
-            this.bunifuFlatButton6.IconVisible = false;
-            this.bunifuFlatButton6.IconZoom = 40D;
-            this.bunifuFlatButton6.IsTab = true;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(241, 427);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(16, 11, 16, 11);
-            this.bunifuFlatButton6.Name = "bunifuFlatButton6";
-            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
-            this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
-            this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton6.selected = false;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(216, 47);
-            this.bunifuFlatButton6.TabIndex = 38;
-            this.bunifuFlatButton6.Text = "Hủy phòng";
-            this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton6.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuFlatButton5
-            // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
-            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton5.BorderRadius = 0;
-            this.bunifuFlatButton5.ButtonText = "Chọn phòng";
-            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.Iconimage = null;
-            this.bunifuFlatButton5.Iconimage_right = null;
-            this.bunifuFlatButton5.Iconimage_right_Selected = null;
-            this.bunifuFlatButton5.Iconimage_Selected = null;
-            this.bunifuFlatButton5.IconMarginLeft = 0;
-            this.bunifuFlatButton5.IconMarginRight = 0;
-            this.bunifuFlatButton5.IconRightVisible = false;
-            this.bunifuFlatButton5.IconRightZoom = 0D;
-            this.bunifuFlatButton5.IconVisible = false;
-            this.bunifuFlatButton5.IconZoom = 40D;
-            this.bunifuFlatButton5.IsTab = true;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(16, 427);
-            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(12, 9, 12, 9);
-            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
-            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
-            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
-            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(216, 47);
-            this.bunifuFlatButton5.TabIndex = 37;
-            this.bunifuFlatButton5.Text = "Chọn phòng";
-            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // showDataRoom
             // 
@@ -364,7 +290,7 @@
             this.showDataRoom.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.showDataRoom.RowTemplate.Height = 24;
             this.showDataRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.showDataRoom.Size = new System.Drawing.Size(477, 303);
+            this.showDataRoom.Size = new System.Drawing.Size(477, 317);
             this.showDataRoom.TabIndex = 31;
             this.showDataRoom.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.showDataRoom.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -395,8 +321,8 @@
             this.groupBox2.Controls.Add(this.txt_SDT);
             this.groupBox2.Controls.Add(this.gunaLabel12);
             this.groupBox2.Controls.Add(this.dtp_NgaySinh);
-            this.groupBox2.Controls.Add(this.Nu);
-            this.groupBox2.Controls.Add(this.Nam);
+            this.groupBox2.Controls.Add(this.rd_female);
+            this.groupBox2.Controls.Add(this.rd_male);
             this.groupBox2.Controls.Add(this.gunaLabel10);
             this.groupBox2.Controls.Add(this.gunaLabel9);
             this.groupBox2.Controls.Add(this.txt_QuocTich);
@@ -418,29 +344,82 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin khách hàng";
             // 
-            // Nu
+            // txt_SDT
             // 
-            this.Nu.AutoSize = true;
-            this.Nu.Location = new System.Drawing.Point(531, 302);
-            this.Nu.Margin = new System.Windows.Forms.Padding(4);
-            this.Nu.Name = "Nu";
-            this.Nu.Size = new System.Drawing.Size(51, 24);
-            this.Nu.TabIndex = 32;
-            this.Nu.Text = "Nữ";
-            this.Nu.UseVisualStyleBackColor = true;
+            this.txt_SDT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_SDT.BaseColor = System.Drawing.Color.White;
+            this.txt_SDT.BorderColor = System.Drawing.Color.Silver;
+            this.txt_SDT.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_SDT.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_SDT.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.txt_SDT.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_SDT.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_SDT.ForeColor = System.Drawing.Color.Black;
+            this.txt_SDT.Location = new System.Drawing.Point(28, 279);
+            this.txt_SDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.PasswordChar = '\0';
+            this.txt_SDT.Size = new System.Drawing.Size(272, 47);
+            this.txt_SDT.TabIndex = 35;
             // 
-            // Nam
+            // gunaLabel12
             // 
-            this.Nam.AutoSize = true;
-            this.Nam.Checked = true;
-            this.Nam.Location = new System.Drawing.Point(420, 302);
-            this.Nam.Margin = new System.Windows.Forms.Padding(4);
-            this.Nam.Name = "Nam";
-            this.Nam.Size = new System.Drawing.Size(65, 24);
-            this.Nam.TabIndex = 31;
-            this.Nam.TabStop = true;
-            this.Nam.Text = "Nam";
-            this.Nam.UseVisualStyleBackColor = true;
+            this.gunaLabel12.AutoSize = true;
+            this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.gunaLabel12.Location = new System.Drawing.Point(24, 253);
+            this.gunaLabel12.Name = "gunaLabel12";
+            this.gunaLabel12.Size = new System.Drawing.Size(115, 23);
+            this.gunaLabel12.TabIndex = 34;
+            this.gunaLabel12.Text = "Số điện thoại:";
+            // 
+            // dtp_NgaySinh
+            // 
+            this.dtp_NgaySinh.BaseColor = System.Drawing.Color.White;
+            this.dtp_NgaySinh.BorderColor = System.Drawing.Color.Silver;
+            this.dtp_NgaySinh.CustomFormat = null;
+            this.dtp_NgaySinh.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtp_NgaySinh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtp_NgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtp_NgaySinh.ForeColor = System.Drawing.Color.Black;
+            this.dtp_NgaySinh.Location = new System.Drawing.Point(31, 386);
+            this.dtp_NgaySinh.Margin = new System.Windows.Forms.Padding(4);
+            this.dtp_NgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtp_NgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtp_NgaySinh.Name = "dtp_NgaySinh";
+            this.dtp_NgaySinh.OnHoverBaseColor = System.Drawing.Color.White;
+            this.dtp_NgaySinh.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtp_NgaySinh.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dtp_NgaySinh.OnPressedColor = System.Drawing.Color.Black;
+            this.dtp_NgaySinh.Size = new System.Drawing.Size(272, 47);
+            this.dtp_NgaySinh.TabIndex = 33;
+            this.dtp_NgaySinh.Text = "Thursday, October 10, 2019";
+            this.dtp_NgaySinh.Value = new System.DateTime(2019, 10, 10, 16, 28, 53, 770);
+            // 
+            // rd_female
+            // 
+            this.rd_female.AutoSize = true;
+            this.rd_female.Location = new System.Drawing.Point(531, 302);
+            this.rd_female.Margin = new System.Windows.Forms.Padding(4);
+            this.rd_female.Name = "rd_female";
+            this.rd_female.Size = new System.Drawing.Size(51, 24);
+            this.rd_female.TabIndex = 32;
+            this.rd_female.Text = "Nữ";
+            this.rd_female.UseVisualStyleBackColor = true;
+            // 
+            // rd_male
+            // 
+            this.rd_male.AutoSize = true;
+            this.rd_male.Checked = true;
+            this.rd_male.Location = new System.Drawing.Point(420, 302);
+            this.rd_male.Margin = new System.Windows.Forms.Padding(4);
+            this.rd_male.Name = "rd_male";
+            this.rd_male.Size = new System.Drawing.Size(65, 24);
+            this.rd_male.TabIndex = 31;
+            this.rd_male.TabStop = true;
+            this.rd_male.Text = "Nam";
+            this.rd_male.UseVisualStyleBackColor = true;
             // 
             // gunaLabel10
             // 
@@ -716,60 +695,6 @@
             this.txt_user.Size = new System.Drawing.Size(272, 47);
             this.txt_user.TabIndex = 18;
             // 
-            // dtp_NgaySinh
-            // 
-            this.dtp_NgaySinh.BaseColor = System.Drawing.Color.White;
-            this.dtp_NgaySinh.BorderColor = System.Drawing.Color.Silver;
-            this.dtp_NgaySinh.CustomFormat = null;
-            this.dtp_NgaySinh.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtp_NgaySinh.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtp_NgaySinh.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dtp_NgaySinh.ForeColor = System.Drawing.Color.Black;
-            this.dtp_NgaySinh.Location = new System.Drawing.Point(31, 386);
-            this.dtp_NgaySinh.Margin = new System.Windows.Forms.Padding(4);
-            this.dtp_NgaySinh.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtp_NgaySinh.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtp_NgaySinh.Name = "dtp_NgaySinh";
-            this.dtp_NgaySinh.OnHoverBaseColor = System.Drawing.Color.White;
-            this.dtp_NgaySinh.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtp_NgaySinh.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.dtp_NgaySinh.OnPressedColor = System.Drawing.Color.Black;
-            this.dtp_NgaySinh.Size = new System.Drawing.Size(272, 47);
-            this.dtp_NgaySinh.TabIndex = 33;
-            this.dtp_NgaySinh.Text = "Thursday, October 10, 2019";
-            this.dtp_NgaySinh.Value = new System.DateTime(2019, 10, 10, 16, 28, 53, 770);
-            // 
-            // txt_SDT
-            // 
-            this.txt_SDT.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_SDT.BaseColor = System.Drawing.Color.White;
-            this.txt_SDT.BorderColor = System.Drawing.Color.Silver;
-            this.txt_SDT.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_SDT.FocusedBaseColor = System.Drawing.Color.White;
-            this.txt_SDT.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.txt_SDT.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_SDT.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_SDT.ForeColor = System.Drawing.Color.Black;
-            this.txt_SDT.Location = new System.Drawing.Point(28, 279);
-            this.txt_SDT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.PasswordChar = '\0';
-            this.txt_SDT.Size = new System.Drawing.Size(272, 47);
-            this.txt_SDT.TabIndex = 35;
-            // 
-            // gunaLabel12
-            // 
-            this.gunaLabel12.AutoSize = true;
-            this.gunaLabel12.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gunaLabel12.Location = new System.Drawing.Point(24, 253);
-            this.gunaLabel12.Name = "gunaLabel12";
-            this.gunaLabel12.Size = new System.Drawing.Size(115, 23);
-            this.gunaLabel12.TabIndex = 34;
-            this.gunaLabel12.Text = "Số điện thoại:";
-            this.gunaLabel12.Click += new System.EventHandler(this.gunaLabel12_Click);
-            // 
             // frmBookRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -820,8 +745,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI.WinForms.GunaDateTimePicker date_CheckOut;
         private Guna.UI.WinForms.GunaDateTimePicker Date_CheckIn;
-        private System.Windows.Forms.RadioButton Nu;
-        private System.Windows.Forms.RadioButton Nam;
+        private System.Windows.Forms.RadioButton rd_female;
+        private System.Windows.Forms.RadioButton rd_male;
         
         private Guna.UI.WinForms.GunaLabel gunaLabel10;
         private Guna.UI.WinForms.GunaLabel gunaLabel9;
@@ -837,8 +762,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private Bunifu.Framework.UI.BunifuFlatButton btn_DatPhong;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
         private Guna.UI.WinForms.GunaDataGridView showDataRoom;
         private Guna.UI.WinForms.GunaTextBox txt_MaDatPhong;
         private Guna.UI.WinForms.GunaLabel gunaLabel11;

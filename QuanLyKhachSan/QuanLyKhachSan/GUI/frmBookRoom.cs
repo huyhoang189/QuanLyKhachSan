@@ -43,6 +43,7 @@ namespace QuanLyKhachSan.GUI
             DataTable dt_bookroom = new DataTable();
             using (conn = new SqlConnection(cnn.getConnectionString(1)))
             {
+                conn.Open();
                 query = "select *from BookRoom order by ID DESC";
                 adap = new SqlDataAdapter(query, conn);
                 adap.Fill(dt_bookroom);
@@ -54,7 +55,7 @@ namespace QuanLyKhachSan.GUI
             MaDatPhong = Id_phong.ToString();
             return MaDatPhong;
         }
-        bool check_Customer(string CMND)
+        string check_Customer(string CMND)
         {
             bool check=true;
             query = "select *from Customer where IDCard='"+CMND+"'";
@@ -64,8 +65,18 @@ namespace QuanLyKhachSan.GUI
                 adap = new SqlDataAdapter(query, conn);
                 adap.Fill(dt_customer);
             }
-            if (dt_customer.Rows.Count == 0) return false;
-            return true;
+            if (dt_customer.Rows.Count == 0)
+            {
+                return "1";
+            }
+            else
+            {
+                string kh_id = "";
+                kh_id = dt_customer.Rows[0]["IDCustomer"].ToString();
+                return kh_id;
+            }
+            
+
         }
         private void gunaLabel2_Click(object sender, EventArgs e)
         {
@@ -101,38 +112,89 @@ namespace QuanLyKhachSan.GUI
         }
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-           
-            if (Check_InfoCustomer() == false)
+            int index;
+            string kh_ID = "";
+            string kh_CMND = "";
+            string kh_sex = "";
+            if(rd_male.Checked==true)
             {
-                MessageBox.Show("Thông tin khách hàng chưa đầy đủ!");
+                kh_sex = "Nam";
             }
             else
             {
-                if(check_Customer(txt_CMND.Text.Trim())==false)
+                kh_sex = "Nữ";
+            }
+            index = showDataRoom.SelectedRows.Count;
+            if (Check_InfoCustomer() == false)
+            {
+                MessageBox.Show("Thông tin khách hàng chưa đầy đủ!");
+                return;
+            }
+            else
+            {
+                if(check_Customer(txt_CMND.Text.Trim())=="1")
                 {
+                    try
+                    {
+                        query = "USP_InsertCustomer_";
+                        using (conn = new SqlConnection(cnn.getConnectionString(1)))
+                        {
+                            conn.Open();
+                            cmd = new SqlCommand(query, conn);
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@customerName", txt_HoTen.Text);
+                            cmd.Parameters.AddWithValue("@idCustomerType",Convert.ToInt32(1));
+                            cmd.Parameters.AddWithValue("@idCard", txt_CMND.Text);
+                            cmd.Parameters.AddWithValue("@address", txt_DiaChi.Text);
+                            cmd.Parameters.AddWithValue("@dateOfBirth", dtp_NgaySinh.Value);
+                            cmd.Parameters.AddWithValue("@phoneNumber", Convert.ToInt32(txt_SDT.Text));
+                            cmd.Parameters.AddWithValue("@sex", kh_sex);
+                            cmd.Parameters.AddWithValue("@nationality", txt_QuocTich.Text.Trim());
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+                            kh_ID = "1";
+                        }
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Thông tin khách hàng chưa đúng");
+                    }
+                    
+                }
+                else
+                {
+                    kh_ID = check_Customer(txt_CMND.Text.Trim());
+                }
+                
 
-                    query = "USP_InsertCustomer"; 
+                string id_Room = showDataRoom.Rows[index-1].Cells["ID"].Value.ToString();
+                try
+                {
                     using (conn = new SqlConnection(cnn.getConnectionString(1)))
                     {
-
+                        query = "USP_InsertBookRoom";
+                        conn.Open();
                         cmd = new SqlCommand(query, conn);
-                        cmd.Parameters.AddWithValue("@customerName", txt_HoTen.Text);
-                        cmd.Parameters.AddWithValue("@idCustomerType", 1);
-                        cmd.Parameters.AddWithValue("@idCard", txt_CMND.Text);
-                        cmd.Parameters.AddWithValue("@address", txt_DiaChi.Text);
-                        cmd.Parameters.AddWithValue("@dateOfBirth", dtp_NgaySinh.Value);
-                        cmd.Parameters.AddWithValue("@phoneNumber", Convert.ToInt32(txt_SDT.Text));
-
-
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@idCustomer", Convert.ToInt32(kh_ID));
+                        cmd.Parameters.AddWithValue("@idRoom", Convert.ToInt32(id_Room));
+                        cmd.Parameters.AddWithValue("@datecheckin", Date_CheckIn.Value);
+                        cmd.Parameters.AddWithValue("@datecheckout", date_CheckOut.Value);
+                        cmd.Parameters.AddWithValue("@datebookroon", DateTime.Now.Date);
+                        cmd.ExecuteNonQuery();
+                        conn.Close();
+                        MessageBox.Show("Đặt phòng thành công!");
                     }
-                        
+                }
+
+                catch
+                {
+                    MessageBox.Show("Đặt phòng thất bại!");
+                }
                 }
             }
         }
 
-        private void gunaLabel12_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
-}
+
