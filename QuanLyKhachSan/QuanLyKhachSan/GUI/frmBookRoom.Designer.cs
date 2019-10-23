@@ -43,7 +43,7 @@
             this.Date_CheckIn = new Guna.UI.WinForms.GunaDateTimePicker();
             this.date_CheckOut = new Guna.UI.WinForms.GunaDateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.gunaTextBox6 = new Guna.UI.WinForms.GunaTextBox();
+            this.txt_MaDatPhong = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel11 = new Guna.UI.WinForms.GunaLabel();
             this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -209,7 +209,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.gunaTextBox6);
+            this.groupBox1.Controls.Add(this.txt_MaDatPhong);
             this.groupBox1.Controls.Add(this.gunaLabel11);
             this.groupBox1.Controls.Add(this.bunifuFlatButton6);
             this.groupBox1.Controls.Add(this.bunifuFlatButton5);
@@ -225,24 +225,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chọn phòng";
             // 
-            // gunaTextBox6
+            // txt_MaDatPhong
             // 
-            this.gunaTextBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_MaDatPhong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaTextBox6.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox6.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox6.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox6.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.gunaTextBox6.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox6.ForeColor = System.Drawing.Color.Black;
-            this.gunaTextBox6.Location = new System.Drawing.Point(100, 367);
-            this.gunaTextBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gunaTextBox6.Name = "gunaTextBox6";
-            this.gunaTextBox6.PasswordChar = '\0';
-            this.gunaTextBox6.Size = new System.Drawing.Size(272, 47);
-            this.gunaTextBox6.TabIndex = 40;
+            this.txt_MaDatPhong.BaseColor = System.Drawing.Color.White;
+            this.txt_MaDatPhong.BorderColor = System.Drawing.Color.Silver;
+            this.txt_MaDatPhong.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_MaDatPhong.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_MaDatPhong.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.txt_MaDatPhong.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_MaDatPhong.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_MaDatPhong.ForeColor = System.Drawing.Color.Black;
+            this.txt_MaDatPhong.Location = new System.Drawing.Point(100, 367);
+            this.txt_MaDatPhong.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_MaDatPhong.Name = "txt_MaDatPhong";
+            this.txt_MaDatPhong.PasswordChar = '\0';
+            this.txt_MaDatPhong.Size = new System.Drawing.Size(272, 47);
+            this.txt_MaDatPhong.TabIndex = 40;
             // 
             // gunaLabel11
             // 
@@ -878,7 +878,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
         private Guna.UI.WinForms.GunaDataGridView showDataRoom;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox6;
+        private Guna.UI.WinForms.GunaTextBox txt_MaDatPhong;
         private Guna.UI.WinForms.GunaLabel gunaLabel11;
         private Guna.UI.WinForms.GunaTextBox txt_user;
     }
