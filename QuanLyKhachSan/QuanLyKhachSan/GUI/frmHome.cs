@@ -187,5 +187,11 @@ namespace QuanLyKhachSan.GUI
             frmAccount fa = new frmAccount();
             fa.Show();
         }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            frmBill f = new frmBill();
+            f.Show();
+        }
     }
 }
