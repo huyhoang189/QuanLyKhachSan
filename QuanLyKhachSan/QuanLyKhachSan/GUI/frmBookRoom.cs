@@ -25,7 +25,7 @@ namespace QuanLyKhachSan.GUI
         }
         void load()
         {
-            DataTable data_emptyroom = new DataTable();
+            DataTable data_emptyroom = new DataTable();    
             using (conn = new SqlConnection(cnn.getConnectionString(1)))
             {
                 query = "USP_LoadEmptyRoom"; 
@@ -33,6 +33,7 @@ namespace QuanLyKhachSan.GUI
                 cmd.CommandType = CommandType.StoredProcedure;
                 adap = new SqlDataAdapter(cmd);
                 adap.Fill(data_emptyroom);
+                //showDataRoom.DataSource = data_emptyroom;
                 showDataRoom.DataSource = data_emptyroom;
             }
             
