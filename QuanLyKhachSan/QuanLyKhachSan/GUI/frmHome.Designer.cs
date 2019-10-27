@@ -53,7 +53,7 @@
             this.tab1 = new System.Windows.Forms.TabPage();
             this.btn_checkInRoom = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_bookRoom = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_AllRoom = new Bunifu.Framework.UI.BunifuFlatButton();
             this.tab3 = new System.Windows.Forms.TabPage();
             this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -147,7 +147,7 @@
             this.panel_control.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.panel_control.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.panel_control.Location = new System.Drawing.Point(0, 0);
-            this.panel_control.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_control.Margin = new System.Windows.Forms.Padding(4);
             this.panel_control.Name = "panel_control";
             this.panel_control.Quality = 10;
             this.panel_control.Size = new System.Drawing.Size(1556, 44);
@@ -160,7 +160,7 @@
             this.btn_exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_exit.Image")));
             this.btn_exit.ImageActive = null;
             this.btn_exit.Location = new System.Drawing.Point(1503, 5);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(47, 33);
             this.btn_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -188,7 +188,7 @@
             this.btn_controlMenu.Image = ((System.Drawing.Image)(resources.GetObject("btn_controlMenu.Image")));
             this.btn_controlMenu.ImageActive = null;
             this.btn_controlMenu.Location = new System.Drawing.Point(7, 5);
-            this.btn_controlMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_controlMenu.Margin = new System.Windows.Forms.Padding(4);
             this.btn_controlMenu.Name = "btn_controlMenu";
             this.btn_controlMenu.Size = new System.Drawing.Size(47, 33);
             this.btn_controlMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -250,7 +250,7 @@
             this.tc_Menu_second.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tc_Menu_second.ItemSize = new System.Drawing.Size(18, 18);
             this.tc_Menu_second.Location = new System.Drawing.Point(0, 0);
-            this.tc_Menu_second.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tc_Menu_second.Margin = new System.Windows.Forms.Padding(4);
             this.tc_Menu_second.Name = "tc_Menu_second";
             this.tc_Menu_second.Padding = new System.Drawing.Point(0, 0);
             this.tc_Menu_second.SelectedIndex = 0;
@@ -262,9 +262,9 @@
             this.tab1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
             this.tab1.Controls.Add(this.btn_checkInRoom);
             this.tab1.Controls.Add(this.btn_bookRoom);
-            this.tab1.Controls.Add(this.bunifuFlatButton4);
+            this.tab1.Controls.Add(this.btn_AllRoom);
             this.tab1.Location = new System.Drawing.Point(4, 22);
-            this.tab1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab1.Margin = new System.Windows.Forms.Padding(4);
             this.tab1.Name = "tab1";
             this.tab1.Size = new System.Drawing.Size(235, 792);
             this.tab1.TabIndex = 0;
@@ -344,41 +344,42 @@
             this.btn_bookRoom.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_bookRoom.Click += new System.EventHandler(this.btn_bookRoom_Click);
             // 
-            // bunifuFlatButton4
+            // btn_AllRoom
             // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
-            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "Tất cả các phòng";
-            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = null;
-            this.bunifuFlatButton4.Iconimage_right = null;
-            this.bunifuFlatButton4.Iconimage_right_Selected = null;
-            this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 0;
-            this.bunifuFlatButton4.IconMarginRight = 0;
-            this.bunifuFlatButton4.IconRightVisible = false;
-            this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = false;
-            this.bunifuFlatButton4.IconZoom = 40D;
-            this.bunifuFlatButton4.IsTab = true;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
-            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
-            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(235, 47);
-            this.bunifuFlatButton4.TabIndex = 4;
-            this.bunifuFlatButton4.Text = "Tất cả các phòng";
-            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AllRoom.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(109)))), ((int)(((byte)(118)))));
+            this.btn_AllRoom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
+            this.btn_AllRoom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_AllRoom.BorderRadius = 0;
+            this.btn_AllRoom.ButtonText = "Tất cả các phòng";
+            this.btn_AllRoom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_AllRoom.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_AllRoom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_AllRoom.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_AllRoom.Iconimage = null;
+            this.btn_AllRoom.Iconimage_right = null;
+            this.btn_AllRoom.Iconimage_right_Selected = null;
+            this.btn_AllRoom.Iconimage_Selected = null;
+            this.btn_AllRoom.IconMarginLeft = 0;
+            this.btn_AllRoom.IconMarginRight = 0;
+            this.btn_AllRoom.IconRightVisible = false;
+            this.btn_AllRoom.IconRightZoom = 0D;
+            this.btn_AllRoom.IconVisible = false;
+            this.btn_AllRoom.IconZoom = 40D;
+            this.btn_AllRoom.IsTab = true;
+            this.btn_AllRoom.Location = new System.Drawing.Point(0, 0);
+            this.btn_AllRoom.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
+            this.btn_AllRoom.Name = "btn_AllRoom";
+            this.btn_AllRoom.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
+            this.btn_AllRoom.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
+            this.btn_AllRoom.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_AllRoom.selected = false;
+            this.btn_AllRoom.Size = new System.Drawing.Size(235, 47);
+            this.btn_AllRoom.TabIndex = 4;
+            this.btn_AllRoom.Text = "Tất cả các phòng";
+            this.btn_AllRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_AllRoom.Textcolor = System.Drawing.Color.White;
+            this.btn_AllRoom.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AllRoom.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
             // tab3
             // 
@@ -386,9 +387,9 @@
             this.tab3.Controls.Add(this.bunifuFlatButton7);
             this.tab3.Controls.Add(this.bunifuFlatButton6);
             this.tab3.Location = new System.Drawing.Point(4, 22);
-            this.tab3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab3.Margin = new System.Windows.Forms.Padding(4);
             this.tab3.Name = "tab3";
-            this.tab3.Size = new System.Drawing.Size(235, 791);
+            this.tab3.Size = new System.Drawing.Size(235, 792);
             this.tab3.TabIndex = 2;
             this.tab3.Text = "3";
             // 
@@ -470,7 +471,7 @@
             this.tab4.Controls.Add(this.btn_ManagerialService);
             this.tab4.Controls.Add(this.bunifuFlatButton11);
             this.tab4.Location = new System.Drawing.Point(4, 22);
-            this.tab4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab4.Margin = new System.Windows.Forms.Padding(4);
             this.tab4.Name = "tab4";
             this.tab4.Size = new System.Drawing.Size(235, 792);
             this.tab4.TabIndex = 3;
@@ -728,7 +729,7 @@
             this.tab7.Location = new System.Drawing.Point(4, 22);
             this.tab7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tab7.Name = "tab7";
-            this.tab7.Size = new System.Drawing.Size(235, 791);
+            this.tab7.Size = new System.Drawing.Size(235, 792);
             this.tab7.TabIndex = 6;
             this.tab7.Text = "7";
             // 
@@ -847,7 +848,7 @@
             this.noneContent.Location = new System.Drawing.Point(4, 22);
             this.noneContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.noneContent.Name = "noneContent";
-            this.noneContent.Size = new System.Drawing.Size(235, 791);
+            this.noneContent.Size = new System.Drawing.Size(235, 792);
             this.noneContent.TabIndex = 7;
             this.noneContent.Text = "8";
             // 
@@ -868,7 +869,7 @@
             this.panel3.Controls.Add(this.tc_Content_Seclect);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(486, 44);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1070, 818);
             this.panel3.TabIndex = 4;
@@ -947,7 +948,7 @@
             this.showDataRoom.EnableHeadersVisualStyles = false;
             this.showDataRoom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
             this.showDataRoom.Location = new System.Drawing.Point(0, 47);
-            this.showDataRoom.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.showDataRoom.Margin = new System.Windows.Forms.Padding(5);
             this.showDataRoom.Name = "showDataRoom";
             this.showDataRoom.ReadOnly = true;
             this.showDataRoom.RowHeadersVisible = false;
@@ -985,10 +986,10 @@
             this.tabBill.Controls.Add(this.showdataBill);
             this.tabBill.Controls.Add(this.label3);
             this.tabBill.Location = new System.Drawing.Point(4, 25);
-            this.tabBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabBill.Margin = new System.Windows.Forms.Padding(4);
             this.tabBill.Name = "tabBill";
-            this.tabBill.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabBill.Size = new System.Drawing.Size(1063, 788);
+            this.tabBill.Padding = new System.Windows.Forms.Padding(4);
+            this.tabBill.Size = new System.Drawing.Size(1062, 789);
             this.tabBill.TabIndex = 2;
             this.tabBill.Text = "3";
             // 
@@ -1024,15 +1025,15 @@
             this.showdataBill.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.showdataBill.EnableHeadersVisualStyles = false;
             this.showdataBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
-            this.showdataBill.Location = new System.Drawing.Point(4, 42);
-            this.showdataBill.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.showdataBill.Location = new System.Drawing.Point(4, 43);
+            this.showdataBill.Margin = new System.Windows.Forms.Padding(5);
             this.showdataBill.Name = "showdataBill";
             this.showdataBill.ReadOnly = true;
             this.showdataBill.RowHeadersVisible = false;
             this.showdataBill.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.showdataBill.RowTemplate.Height = 24;
             this.showdataBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.showdataBill.Size = new System.Drawing.Size(1055, 742);
+            this.showdataBill.Size = new System.Drawing.Size(1054, 742);
             this.showdataBill.TabIndex = 32;
             this.showdataBill.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.showdataBill.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -1074,9 +1075,9 @@
             this.tabSevice.Controls.Add(this.gunaLabel5);
             this.tabSevice.Controls.Add(this.ShowdataService);
             this.tabSevice.Location = new System.Drawing.Point(4, 25);
-            this.tabSevice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabSevice.Margin = new System.Windows.Forms.Padding(4);
             this.tabSevice.Name = "tabSevice";
-            this.tabSevice.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabSevice.Padding = new System.Windows.Forms.Padding(4);
             this.tabSevice.Size = new System.Drawing.Size(1062, 789);
             this.tabSevice.TabIndex = 3;
             this.tabSevice.Text = "4";
@@ -1124,7 +1125,7 @@
             this.ShowdataService.EnableHeadersVisualStyles = false;
             this.ShowdataService.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
             this.ShowdataService.Location = new System.Drawing.Point(4, 43);
-            this.ShowdataService.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.ShowdataService.Margin = new System.Windows.Forms.Padding(5);
             this.ShowdataService.Name = "ShowdataService";
             this.ShowdataService.ReadOnly = true;
             this.ShowdataService.RowHeadersVisible = false;
@@ -1161,10 +1162,10 @@
             this.tabEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
             this.tabEmp.Controls.Add(this.label8);
             this.tabEmp.Location = new System.Drawing.Point(4, 25);
-            this.tabEmp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabEmp.Margin = new System.Windows.Forms.Padding(4);
             this.tabEmp.Name = "tabEmp";
-            this.tabEmp.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabEmp.Size = new System.Drawing.Size(1063, 788);
+            this.tabEmp.Padding = new System.Windows.Forms.Padding(4);
+            this.tabEmp.Size = new System.Drawing.Size(1062, 789);
             this.tabEmp.TabIndex = 4;
             this.tabEmp.Text = "5";
             // 
@@ -1185,9 +1186,9 @@
             this.tabCustomer.Controls.Add(this.gunaLabel4);
             this.tabCustomer.Controls.Add(this.showDataCustomer);
             this.tabCustomer.Location = new System.Drawing.Point(4, 25);
-            this.tabCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.tabCustomer.Name = "tabCustomer";
-            this.tabCustomer.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabCustomer.Padding = new System.Windows.Forms.Padding(4);
             this.tabCustomer.Size = new System.Drawing.Size(1062, 789);
             this.tabCustomer.TabIndex = 5;
             this.tabCustomer.Text = "6";
@@ -1235,7 +1236,7 @@
             this.showDataCustomer.EnableHeadersVisualStyles = false;
             this.showDataCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
             this.showDataCustomer.Location = new System.Drawing.Point(4, 43);
-            this.showDataCustomer.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.showDataCustomer.Margin = new System.Windows.Forms.Padding(5);
             this.showDataCustomer.Name = "showDataCustomer";
             this.showDataCustomer.ReadOnly = true;
             this.showDataCustomer.RowHeadersVisible = false;
@@ -1317,7 +1318,7 @@
             this.tc_MainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tc_MainMenu.HotTrack = true;
             this.tc_MainMenu.Location = new System.Drawing.Point(0, 0);
-            this.tc_MainMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tc_MainMenu.Margin = new System.Windows.Forms.Padding(4);
             this.tc_MainMenu.Name = "tc_MainMenu";
             this.tc_MainMenu.SelectedIndex = 0;
             this.tc_MainMenu.Size = new System.Drawing.Size(243, 818);
@@ -1572,7 +1573,7 @@
             this.pn_Menu_Parent.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.pn_Menu_Parent.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.pn_Menu_Parent.Location = new System.Drawing.Point(0, 44);
-            this.pn_Menu_Parent.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pn_Menu_Parent.Margin = new System.Windows.Forms.Padding(4);
             this.pn_Menu_Parent.Name = "pn_Menu_Parent";
             this.pn_Menu_Parent.Quality = 10;
             this.pn_Menu_Parent.Size = new System.Drawing.Size(243, 818);
@@ -1639,7 +1640,7 @@
         private System.Windows.Forms.TabPage tab1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Syn;
         private System.Windows.Forms.Panel pn_Menu_child;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_AllRoom;
         private System.Windows.Forms.TabPage tab3;
         private System.Windows.Forms.TabPage tab4;
         private System.Windows.Forms.TabPage tab5;
