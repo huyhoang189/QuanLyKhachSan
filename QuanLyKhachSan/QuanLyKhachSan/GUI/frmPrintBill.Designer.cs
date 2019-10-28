@@ -144,11 +144,12 @@
             this.btn_exit.TabIndex = 0;
             this.btn_exit.TabStop = false;
             this.btn_exit.Zoom = 10;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
             // 
             // bunifuSeparator1
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.DimGray;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
             this.bunifuSeparator1.LineThickness = 3;
             this.bunifuSeparator1.Location = new System.Drawing.Point(14, 206);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
@@ -727,6 +728,7 @@
             this.bunifuThinButton22.Size = new System.Drawing.Size(175, 40);
             this.bunifuThinButton22.TabIndex = 5;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
             // frmPrintBill
             // 
