@@ -14,6 +14,11 @@ namespace QuanLyKhachSan.GUI
     {
         public frmPrintBill()
         {
+            listView1.Columns.Add("STT", 50);
+            listView1.Columns.Add("Tên dịch vụ", 100);
+            listView1.Columns.Add("Đơn giá", 50);
+            listView1.Columns.Add("Số lượng", 50);
+            listView1.Columns.Add("Thành tiền", 50);
             InitializeComponent();
         }
     }
