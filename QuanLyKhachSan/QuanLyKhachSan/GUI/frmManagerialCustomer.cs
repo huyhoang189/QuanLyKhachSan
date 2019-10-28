@@ -358,5 +358,30 @@ namespace QuanLyKhachSan.GUI
 
             }
         }
+
+        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_search_TextChanged(object sender, EventArgs e)
+        {
+            string query = "SELECT IDCard AS 'Số CMND', dbo.CUSTOMER.Name AS 'Họ tên',DateOfBirth AS 'Ngày sinh',Sex AS 'Giới tính', Address AS 'Địa chỉ',Nationality AS' Quốc tịch', dbo.CUSTOMERTYPE.Name AS 'Loại khách' FROM dbo.CUSTOMER JOIN dbo.CUSTOMERTYPE ON CUSTOMERTYPE.ID = CUSTOMER.IDCustomerType" +
+                " where dbo.CUSTOMER.Name like N'%" + txt_search.Text + "%'" + " OR IDCard  LIKE N'%" + txt_search.Text + "%'" + " OR Address LIKE N'%" + txt_search.Text + "%'" + " OR Nationality LIKE N'%" + txt_search.Text + "%'" ;
+
+
+            showDataRoom.Columns.Clear();
+            ConnectionString b = new ConnectionString();
+            string con = b.getConnectionString(frmLogin.checkConnectionString);
+            using (SqlConnection conn = new SqlConnection(con))
+            {
+                conn.Open();
+                DataSet data = new DataSet();
+                SqlDataAdapter adap = new SqlDataAdapter(query, conn);
+                adap.Fill(data);
+                showDataRoom.DataSource = data.Tables[0];
+                conn.Close();
+            }
+        }
     }
 }

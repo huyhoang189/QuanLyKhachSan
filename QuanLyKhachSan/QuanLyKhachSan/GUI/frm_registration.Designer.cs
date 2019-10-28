@@ -48,7 +48,7 @@
             this.txt_Name = new Guna.UI.WinForms.GunaTextBox();
             this.btn_dangky = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
+            this.txt_pass2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaAdvenceButton1 = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaGroupBox2.SuspendLayout();
             this.gunaGroupBox1.SuspendLayout();
@@ -61,7 +61,7 @@
             this.gunaGroupBox2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.gunaGroupBox2.BorderSize = 1;
             this.gunaGroupBox2.Controls.Add(this.gunaLabel9);
-            this.gunaGroupBox2.Controls.Add(this.gunaTextBox1);
+            this.gunaGroupBox2.Controls.Add(this.txt_pass2);
             this.gunaGroupBox2.Controls.Add(this.gunaLabel2);
             this.gunaGroupBox2.Controls.Add(this.txt_Pass);
             this.gunaGroupBox2.Controls.Add(this.gunaLabel1);
@@ -375,6 +375,7 @@
             this.btn_dangky.TabIndex = 30;
             this.btn_dangky.Text = "Đăng ký";
             this.btn_dangky.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_dangky.Click += new System.EventHandler(this.btn_dangky_Click);
             // 
             // gunaLabel9
             // 
@@ -387,24 +388,24 @@
             this.gunaLabel9.TabIndex = 17;
             this.gunaLabel9.Text = "Xác nhận mật khẩu:";
             // 
-            // gunaTextBox1
+            // txt_pass2
             // 
-            this.gunaTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_pass2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.Black;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.gunaTextBox1.Location = new System.Drawing.Point(29, 233);
-            this.gunaTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Size = new System.Drawing.Size(663, 47);
-            this.gunaTextBox1.TabIndex = 16;
+            this.txt_pass2.BaseColor = System.Drawing.Color.White;
+            this.txt_pass2.BorderColor = System.Drawing.Color.Black;
+            this.txt_pass2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_pass2.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_pass2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.txt_pass2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_pass2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_pass2.ForeColor = System.Drawing.Color.Black;
+            this.txt_pass2.Location = new System.Drawing.Point(29, 233);
+            this.txt_pass2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_pass2.Name = "txt_pass2";
+            this.txt_pass2.PasswordChar = '\0';
+            this.txt_pass2.Size = new System.Drawing.Size(663, 47);
+            this.txt_pass2.TabIndex = 16;
             // 
             // gunaAdvenceButton1
             // 
@@ -482,7 +483,7 @@
         private Guna.UI.WinForms.GunaTextBox txt_Name;
         private Guna.UI.WinForms.GunaAdvenceButton btn_dangky;
         private Guna.UI.WinForms.GunaLabel gunaLabel9;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
+        private Guna.UI.WinForms.GunaTextBox txt_pass2;
         private Guna.UI.WinForms.GunaAdvenceButton gunaAdvenceButton1;
     }
 }
