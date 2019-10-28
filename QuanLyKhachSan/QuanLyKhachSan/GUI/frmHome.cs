@@ -50,7 +50,7 @@ namespace QuanLyKhachSan.GUI
         {
             DataSet data = new DataSet();
             ConnectionString b = new ConnectionString();
-            string con = b.getConnectionString(1);
+            string con = b.getConnectionString(frmLogin.checkConnectionString);
             using (SqlConnection connect = new SqlConnection(con))
             {
 
