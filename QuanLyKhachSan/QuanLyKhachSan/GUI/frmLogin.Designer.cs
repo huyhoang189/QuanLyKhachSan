@@ -231,6 +231,7 @@
             this.btn_dangky.TabIndex = 19;
             this.btn_dangky.Text = "Đăng ký";
             this.btn_dangky.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_dangky.Click += new System.EventHandler(this.btn_dangky_Click);
             // 
             // frmLogin
             // 

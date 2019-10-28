@@ -98,5 +98,11 @@ namespace QuanLyKhachSan.GUI
             }
             return 0;
         }
+
+        private void btn_dangky_Click(object sender, EventArgs e)
+        {
+            frm_registration a = new frm_registration();
+            a.ShowDialog();
+        }
     }
 }
