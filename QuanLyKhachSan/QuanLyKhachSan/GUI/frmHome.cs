@@ -117,8 +117,8 @@ namespace QuanLyKhachSan.GUI
         {
             tc_Menu_second.SelectedTab = tab5;
             tc_Content_Seclect.SelectedTab = tabEmp;
-            string query = "exec  ";
-            initData(query, showDataCustomer);
+            string query = "SELECT * FROM dbo.STAFF";
+            initData(query, showDataEmp);
         }
 
         private void btn_Customer_Click(object sender, EventArgs e)

@@ -38,10 +38,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel_control = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btn_exit = new Bunifu.Framework.UI.BunifuImageButton();
@@ -102,6 +105,7 @@
             this.btn_service = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_bill = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pn_Menu_Parent = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.showDataEmp = new Guna.UI.WinForms.GunaDataGridView();
             this.panel_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_controlMenu)).BeginInit();
@@ -128,6 +132,7 @@
             this.tc_MainMenu.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.pn_Menu_Parent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.showDataEmp)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -223,7 +228,7 @@
             this.btn_Syn.IconZoom = 60D;
             this.btn_Syn.IsTab = true;
             this.btn_Syn.Location = new System.Drawing.Point(0, 0);
-            this.btn_Syn.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_Syn.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Syn.Name = "btn_Syn";
             this.btn_Syn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.btn_Syn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -290,7 +295,7 @@
             this.btn_checkInRoom.IconZoom = 40D;
             this.btn_checkInRoom.IsTab = true;
             this.btn_checkInRoom.Location = new System.Drawing.Point(0, 76);
-            this.btn_checkInRoom.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_checkInRoom.Margin = new System.Windows.Forms.Padding(5);
             this.btn_checkInRoom.Name = "btn_checkInRoom";
             this.btn_checkInRoom.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.btn_checkInRoom.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -327,7 +332,7 @@
             this.btn_bookRoom.IconZoom = 40D;
             this.btn_bookRoom.IsTab = true;
             this.btn_bookRoom.Location = new System.Drawing.Point(0, 38);
-            this.btn_bookRoom.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_bookRoom.Margin = new System.Windows.Forms.Padding(5);
             this.btn_bookRoom.Name = "btn_bookRoom";
             this.btn_bookRoom.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.btn_bookRoom.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -364,7 +369,7 @@
             this.bunifuFlatButton4.IconZoom = 40D;
             this.bunifuFlatButton4.IsTab = true;
             this.bunifuFlatButton4.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -411,7 +416,7 @@
             this.bunifuFlatButton7.IconZoom = 40D;
             this.bunifuFlatButton7.IsTab = true;
             this.bunifuFlatButton7.Location = new System.Drawing.Point(0, 38);
-            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton7.Name = "bunifuFlatButton7";
             this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -447,7 +452,7 @@
             this.bunifuFlatButton6.IconZoom = 40D;
             this.bunifuFlatButton6.IsTab = true;
             this.bunifuFlatButton6.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
             this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -495,7 +500,7 @@
             this.bunifuFlatButton2.IconZoom = 40D;
             this.bunifuFlatButton2.IsTab = true;
             this.bunifuFlatButton2.Location = new System.Drawing.Point(0, 76);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -531,7 +536,7 @@
             this.btn_ManagerialService.IconZoom = 40D;
             this.btn_ManagerialService.IsTab = true;
             this.btn_ManagerialService.Location = new System.Drawing.Point(0, 38);
-            this.btn_ManagerialService.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_ManagerialService.Margin = new System.Windows.Forms.Padding(5);
             this.btn_ManagerialService.Name = "btn_ManagerialService";
             this.btn_ManagerialService.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.btn_ManagerialService.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -568,7 +573,7 @@
             this.bunifuFlatButton11.IconZoom = 40D;
             this.bunifuFlatButton11.IsTab = true;
             this.bunifuFlatButton11.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton11.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton11.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton11.Name = "bunifuFlatButton11";
             this.bunifuFlatButton11.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.bunifuFlatButton11.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -616,7 +621,7 @@
             this.btn_ManagerialEmp.IconZoom = 40D;
             this.btn_ManagerialEmp.IsTab = true;
             this.btn_ManagerialEmp.Location = new System.Drawing.Point(0, 38);
-            this.btn_ManagerialEmp.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_ManagerialEmp.Margin = new System.Windows.Forms.Padding(5);
             this.btn_ManagerialEmp.Name = "btn_ManagerialEmp";
             this.btn_ManagerialEmp.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.btn_ManagerialEmp.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -653,7 +658,7 @@
             this.bunifuFlatButton12.IconZoom = 40D;
             this.bunifuFlatButton12.IsTab = true;
             this.bunifuFlatButton12.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton12.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton12.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton12.Name = "bunifuFlatButton12";
             this.bunifuFlatButton12.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.bunifuFlatButton12.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -701,7 +706,7 @@
             this.btn_ManagerialCustomer.IconZoom = 40D;
             this.btn_ManagerialCustomer.IsTab = true;
             this.btn_ManagerialCustomer.Location = new System.Drawing.Point(0, 38);
-            this.btn_ManagerialCustomer.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_ManagerialCustomer.Margin = new System.Windows.Forms.Padding(5);
             this.btn_ManagerialCustomer.Name = "btn_ManagerialCustomer";
             this.btn_ManagerialCustomer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.btn_ManagerialCustomer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -738,7 +743,7 @@
             this.bunifuFlatButton1.IconZoom = 40D;
             this.bunifuFlatButton1.IsTab = true;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -758,7 +763,7 @@
             this.tab7.Controls.Add(this.bunifuFlatButton9);
             this.tab7.Controls.Add(this.bunifuFlatButton8);
             this.tab7.Location = new System.Drawing.Point(4, 22);
-            this.tab7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tab7.Margin = new System.Windows.Forms.Padding(2);
             this.tab7.Name = "tab7";
             this.tab7.Size = new System.Drawing.Size(174, 578);
             this.tab7.TabIndex = 6;
@@ -787,7 +792,7 @@
             this.btn_Account.IconZoom = 40D;
             this.btn_Account.IsTab = true;
             this.btn_Account.Location = new System.Drawing.Point(0, 76);
-            this.btn_Account.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_Account.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Account.Name = "btn_Account";
             this.btn_Account.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.btn_Account.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -824,7 +829,7 @@
             this.bunifuFlatButton9.IconZoom = 40D;
             this.bunifuFlatButton9.IsTab = true;
             this.bunifuFlatButton9.Location = new System.Drawing.Point(0, 38);
-            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton9.Name = "bunifuFlatButton9";
             this.bunifuFlatButton9.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.bunifuFlatButton9.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -860,7 +865,7 @@
             this.bunifuFlatButton8.IconZoom = 40D;
             this.bunifuFlatButton8.IsTab = true;
             this.bunifuFlatButton8.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton8.Name = "bunifuFlatButton8";
             this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -877,7 +882,7 @@
             // 
             this.noneContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
             this.noneContent.Location = new System.Drawing.Point(4, 22);
-            this.noneContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.noneContent.Margin = new System.Windows.Forms.Padding(2);
             this.noneContent.Name = "noneContent";
             this.noneContent.Size = new System.Drawing.Size(174, 578);
             this.noneContent.TabIndex = 7;
@@ -979,7 +984,7 @@
             this.showDataRoom.EnableHeadersVisualStyles = false;
             this.showDataRoom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
             this.showDataRoom.Location = new System.Drawing.Point(0, 55);
-            this.showDataRoom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.showDataRoom.Margin = new System.Windows.Forms.Padding(4);
             this.showDataRoom.Name = "showDataRoom";
             this.showDataRoom.ReadOnly = true;
             this.showDataRoom.RowHeadersVisible = false;
@@ -1018,7 +1023,7 @@
             this.tabBill.Controls.Add(this.label3);
             this.tabBill.Location = new System.Drawing.Point(4, 22);
             this.tabBill.Name = "tabBill";
-            this.tabBill.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabBill.Padding = new System.Windows.Forms.Padding(3);
             this.tabBill.Size = new System.Drawing.Size(668, 578);
             this.tabBill.TabIndex = 2;
             this.tabBill.Text = "3";
@@ -1056,7 +1061,7 @@
             this.showdataBill.EnableHeadersVisualStyles = false;
             this.showdataBill.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
             this.showdataBill.Location = new System.Drawing.Point(3, 38);
-            this.showdataBill.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.showdataBill.Margin = new System.Windows.Forms.Padding(4);
             this.showdataBill.Name = "showdataBill";
             this.showdataBill.ReadOnly = true;
             this.showdataBill.RowHeadersVisible = false;
@@ -1105,7 +1110,7 @@
             this.tabSevice.Controls.Add(this.ShowdataService);
             this.tabSevice.Location = new System.Drawing.Point(4, 22);
             this.tabSevice.Name = "tabSevice";
-            this.tabSevice.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabSevice.Padding = new System.Windows.Forms.Padding(3);
             this.tabSevice.Size = new System.Drawing.Size(668, 578);
             this.tabSevice.TabIndex = 3;
             this.tabSevice.Text = "4";
@@ -1154,7 +1159,7 @@
             this.ShowdataService.EnableHeadersVisualStyles = false;
             this.ShowdataService.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
             this.ShowdataService.Location = new System.Drawing.Point(3, 38);
-            this.ShowdataService.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ShowdataService.Margin = new System.Windows.Forms.Padding(4);
             this.ShowdataService.Name = "ShowdataService";
             this.ShowdataService.ReadOnly = true;
             this.ShowdataService.RowHeadersVisible = false;
@@ -1189,10 +1194,11 @@
             // tabEmp
             // 
             this.tabEmp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
+            this.tabEmp.Controls.Add(this.showDataEmp);
             this.tabEmp.Controls.Add(this.label8);
             this.tabEmp.Location = new System.Drawing.Point(4, 22);
             this.tabEmp.Name = "tabEmp";
-            this.tabEmp.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabEmp.Padding = new System.Windows.Forms.Padding(3);
             this.tabEmp.Size = new System.Drawing.Size(668, 578);
             this.tabEmp.TabIndex = 4;
             this.tabEmp.Text = "5";
@@ -1214,7 +1220,7 @@
             this.tabCustomer.Controls.Add(this.showDataCustomer);
             this.tabCustomer.Location = new System.Drawing.Point(4, 22);
             this.tabCustomer.Name = "tabCustomer";
-            this.tabCustomer.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabCustomer.Padding = new System.Windows.Forms.Padding(3);
             this.tabCustomer.Size = new System.Drawing.Size(668, 578);
             this.tabCustomer.TabIndex = 5;
             this.tabCustomer.Text = "6";
@@ -1234,36 +1240,36 @@
             // 
             this.showDataCustomer.AllowUserToAddRows = false;
             this.showDataCustomer.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.showDataCustomer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.showDataCustomer.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.showDataCustomer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.showDataCustomer.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.showDataCustomer.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
             this.showDataCustomer.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.showDataCustomer.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.showDataCustomer.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.showDataCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.showDataCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.showDataCustomer.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(217)))), ((int)(((byte)(244)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.showDataCustomer.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(217)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.showDataCustomer.DefaultCellStyle = dataGridViewCellStyle15;
             this.showDataCustomer.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.showDataCustomer.EnableHeadersVisualStyles = false;
             this.showDataCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
             this.showDataCustomer.Location = new System.Drawing.Point(3, 38);
-            this.showDataCustomer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.showDataCustomer.Margin = new System.Windows.Forms.Padding(4);
             this.showDataCustomer.Name = "showDataCustomer";
             this.showDataCustomer.ReadOnly = true;
             this.showDataCustomer.RowHeadersVisible = false;
@@ -1301,7 +1307,7 @@
             this.tabSetting.Controls.Add(this.gunaGoogleSwitch1);
             this.tabSetting.Controls.Add(this.gunaLabel3);
             this.tabSetting.Location = new System.Drawing.Point(4, 22);
-            this.tabSetting.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSetting.Margin = new System.Windows.Forms.Padding(2);
             this.tabSetting.Name = "tabSetting";
             this.tabSetting.Size = new System.Drawing.Size(668, 578);
             this.tabSetting.TabIndex = 6;
@@ -1314,7 +1320,7 @@
             this.gunaGoogleSwitch1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaGoogleSwitch1.FillColor = System.Drawing.Color.White;
             this.gunaGoogleSwitch1.Location = new System.Drawing.Point(129, 38);
-            this.gunaGoogleSwitch1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunaGoogleSwitch1.Margin = new System.Windows.Forms.Padding(2);
             this.gunaGoogleSwitch1.Name = "gunaGoogleSwitch1";
             this.gunaGoogleSwitch1.Size = new System.Drawing.Size(44, 25);
             this.gunaGoogleSwitch1.TabIndex = 17;
@@ -1334,7 +1340,7 @@
             // 
             this.tabNoneContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
             this.tabNoneContent.Location = new System.Drawing.Point(4, 22);
-            this.tabNoneContent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabNoneContent.Margin = new System.Windows.Forms.Padding(2);
             this.tabNoneContent.Name = "tabNoneContent";
             this.tabNoneContent.Size = new System.Drawing.Size(668, 578);
             this.tabNoneContent.TabIndex = 7;
@@ -1391,7 +1397,7 @@
             this.bunifuFlatButton15.IconZoom = 60D;
             this.bunifuFlatButton15.IsTab = true;
             this.bunifuFlatButton15.Location = new System.Drawing.Point(0, 502);
-            this.bunifuFlatButton15.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.bunifuFlatButton15.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuFlatButton15.Name = "bunifuFlatButton15";
             this.bunifuFlatButton15.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.bunifuFlatButton15.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -1427,7 +1433,7 @@
             this.btn_Setting.IconZoom = 60D;
             this.btn_Setting.IsTab = true;
             this.btn_Setting.Location = new System.Drawing.Point(0, 540);
-            this.btn_Setting.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_Setting.Margin = new System.Windows.Forms.Padding(5);
             this.btn_Setting.Name = "btn_Setting";
             this.btn_Setting.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.btn_Setting.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -1464,7 +1470,7 @@
             this.btn_emp.IconZoom = 60D;
             this.btn_emp.IsTab = true;
             this.btn_emp.Location = new System.Drawing.Point(0, 152);
-            this.btn_emp.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_emp.Margin = new System.Windows.Forms.Padding(5);
             this.btn_emp.Name = "btn_emp";
             this.btn_emp.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.btn_emp.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -1501,7 +1507,7 @@
             this.btn_customer.IconZoom = 60D;
             this.btn_customer.IsTab = true;
             this.btn_customer.Location = new System.Drawing.Point(0, 114);
-            this.btn_customer.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_customer.Margin = new System.Windows.Forms.Padding(5);
             this.btn_customer.Name = "btn_customer";
             this.btn_customer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.btn_customer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -1538,7 +1544,7 @@
             this.btn_service.IconZoom = 60D;
             this.btn_service.IsTab = true;
             this.btn_service.Location = new System.Drawing.Point(0, 76);
-            this.btn_service.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_service.Margin = new System.Windows.Forms.Padding(5);
             this.btn_service.Name = "btn_service";
             this.btn_service.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.btn_service.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -1575,7 +1581,7 @@
             this.btn_bill.IconZoom = 60D;
             this.btn_bill.IsTab = true;
             this.btn_bill.Location = new System.Drawing.Point(0, 38);
-            this.btn_bill.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btn_bill.Margin = new System.Windows.Forms.Padding(5);
             this.btn_bill.Name = "btn_bill";
             this.btn_bill.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.btn_bill.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(195)))), ((int)(((byte)(211)))));
@@ -1605,6 +1611,71 @@
             this.pn_Menu_Parent.Size = new System.Drawing.Size(182, 604);
             this.pn_Menu_Parent.TabIndex = 1;
             // 
+            // showDataEmp
+            // 
+            this.showDataEmp.AllowUserToAddRows = false;
+            this.showDataEmp.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.showDataEmp.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.showDataEmp.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.showDataEmp.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.showDataEmp.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
+            this.showDataEmp.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.showDataEmp.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.showDataEmp.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.showDataEmp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.showDataEmp.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(217)))), ((int)(((byte)(244)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.showDataEmp.DefaultCellStyle = dataGridViewCellStyle12;
+            this.showDataEmp.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.showDataEmp.EnableHeadersVisualStyles = false;
+            this.showDataEmp.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
+            this.showDataEmp.Location = new System.Drawing.Point(3, 38);
+            this.showDataEmp.Margin = new System.Windows.Forms.Padding(4);
+            this.showDataEmp.Name = "showDataEmp";
+            this.showDataEmp.ReadOnly = true;
+            this.showDataEmp.RowHeadersVisible = false;
+            this.showDataEmp.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
+            this.showDataEmp.RowTemplate.Height = 24;
+            this.showDataEmp.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.showDataEmp.Size = new System.Drawing.Size(662, 537);
+            this.showDataEmp.TabIndex = 32;
+            this.showDataEmp.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
+            this.showDataEmp.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.showDataEmp.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.showDataEmp.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.showDataEmp.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.showDataEmp.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.showDataEmp.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
+            this.showDataEmp.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
+            this.showDataEmp.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
+            this.showDataEmp.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.showDataEmp.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.showDataEmp.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.showDataEmp.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.showDataEmp.ThemeStyle.HeaderStyle.Height = 25;
+            this.showDataEmp.ThemeStyle.ReadOnly = true;
+            this.showDataEmp.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
+            this.showDataEmp.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.showDataEmp.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.showDataEmp.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.showDataEmp.ThemeStyle.RowsStyle.Height = 24;
+            this.showDataEmp.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(182)))), ((int)(((byte)(217)))), ((int)(((byte)(244)))));
+            this.showDataEmp.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1616,7 +1687,7 @@
             this.Controls.Add(this.pn_Menu_Parent);
             this.Controls.Add(this.panel_control);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmHome";
             this.Opacity = 0.96D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1654,6 +1725,7 @@
             this.tc_MainMenu.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.pn_Menu_Parent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.showDataEmp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1719,5 +1791,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaDataGridView showdataBill;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Guna.UI.WinForms.GunaDataGridView showDataEmp;
     }
 }
