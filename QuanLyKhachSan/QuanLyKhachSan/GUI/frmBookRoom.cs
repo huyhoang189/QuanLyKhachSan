@@ -55,7 +55,7 @@ namespace QuanLyKhachSan.GUI
             MaDatPhong = Id_phong.ToString();
             return MaDatPhong;
         }
-        string check_Customer(string CMND)
+        int check_Customer(string CMND)
         {
             bool check=true;
             query = "select *from Customer where IDCard='"+CMND+"'";
@@ -67,12 +67,12 @@ namespace QuanLyKhachSan.GUI
             }
             if (dt_customer.Rows.Count == 0)
             {
-                return "1";
+                return 1;
             }
             else
             {
-                string kh_id = "";
-                kh_id = dt_customer.Rows[0]["IDCustomer"].ToString();
+                int kh_id;
+                kh_id =Convert.ToInt32(dt_customer.Rows[0]["ID"].ToString());
                 return kh_id;
             }
             
@@ -110,10 +110,32 @@ namespace QuanLyKhachSan.GUI
             }
             return true;
         }
+        int getId()
+        {
+            int kh_id;
+            DataTable dt_customer = new DataTable();
+            try
+            {
+                using (conn = new SqlConnection(cnn.getConnectionString(1)))
+                {
+                    query = "selecr *from Customer order by ID desc";
+                    conn.Open();
+                    adap = new SqlDataAdapter(query, conn);
+                    adap.Fill(dt_customer);
+                    kh_id = Convert.ToInt32(dt_customer.Rows[0]["ID"].ToString());
+                    conn.Close();
+                }
+            }
+            catch
+            {
+                return 0;
+            }
+            return kh_id;
+        }
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
             int index;
-            string kh_ID = "";
+            int kh_ID=0;
             string kh_CMND = "";
             string kh_sex = "";
             if(rd_male.Checked==true)
@@ -132,7 +154,7 @@ namespace QuanLyKhachSan.GUI
             }
             else
             {
-                if(check_Customer(txt_CMND.Text.Trim())=="1")
+                if(check_Customer(txt_CMND.Text.Trim())==1)
                 {
                     try
                     {
@@ -142,17 +164,17 @@ namespace QuanLyKhachSan.GUI
                             conn.Open();
                             cmd = new SqlCommand(query, conn);
                             cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("@customerName", txt_HoTen.Text);
-                            cmd.Parameters.AddWithValue("@idCustomerType",Convert.ToInt32(1));
                             cmd.Parameters.AddWithValue("@idCard", txt_CMND.Text);
-                            cmd.Parameters.AddWithValue("@address", txt_DiaChi.Text);
+                            cmd.Parameters.AddWithValue("@name", txt_HoTen.Text);
+                            cmd.Parameters.AddWithValue("@idCustomerType",Convert.ToInt32(1));
                             cmd.Parameters.AddWithValue("@dateOfBirth", dtp_NgaySinh.Value);
+                            cmd.Parameters.AddWithValue("@address", txt_DiaChi.Text);
                             cmd.Parameters.AddWithValue("@phoneNumber", Convert.ToInt32(txt_SDT.Text));
                             cmd.Parameters.AddWithValue("@sex", kh_sex);
                             cmd.Parameters.AddWithValue("@nationality", txt_QuocTich.Text.Trim());
                             cmd.ExecuteNonQuery();
                             conn.Close();
-                            kh_ID = "1";
+                            kh_ID = getId();
                         }
                     }
                     catch
@@ -172,15 +194,15 @@ namespace QuanLyKhachSan.GUI
                 {
                     using (conn = new SqlConnection(cnn.getConnectionString(1)))
                     {
-                        query = "USP_InsertBookRoom";
+                        query = "insert_BookRoom";
                         conn.Open();
                         cmd = new SqlCommand(query, conn);
                         cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@idCustomer", Convert.ToInt32(kh_ID));
-                        cmd.Parameters.AddWithValue("@idRoom", Convert.ToInt32(id_Room));
-                        cmd.Parameters.AddWithValue("@datecheckin", Date_CheckIn.Value);
-                        cmd.Parameters.AddWithValue("@datecheckout", date_CheckOut.Value);
-                        cmd.Parameters.AddWithValue("@datebookroon", DateTime.Now.Date);
+                        cmd.Parameters.AddWithValue("@IDRoom", Convert.ToInt32(id_Room));
+                        cmd.Parameters.AddWithValue("@IDCustomer", kh_ID);
+                        cmd.Parameters.AddWithValue("@Date_Checkin", Date_CheckIn.Value);
+                        cmd.Parameters.AddWithValue("@Date_checkout", date_CheckOut.Value);
+                        cmd.Parameters.AddWithValue("@Date_book", date_CheckOut.Value);
                         cmd.ExecuteNonQuery();
                         conn.Close();
                         MessageBox.Show("Đặt phòng thành công!");
