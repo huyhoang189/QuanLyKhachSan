@@ -21,5 +21,15 @@ namespace QuanLyKhachSan.GUI
             listView1.Columns.Add("Thành tiền", 50);
             InitializeComponent();
         }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
