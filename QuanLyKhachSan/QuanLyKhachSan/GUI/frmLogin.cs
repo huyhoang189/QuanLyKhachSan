@@ -96,7 +96,7 @@ namespace QuanLyKhachSan.GUI
                 }
 
             }
-            return 0;
+            return 1;
         }
 
         private void btn_dangky_Click(object sender, EventArgs e)

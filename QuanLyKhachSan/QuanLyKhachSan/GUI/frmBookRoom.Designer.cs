@@ -40,7 +40,6 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.txt_user = new Guna.UI.WinForms.GunaTextBox();
             this.Date_CheckIn = new Guna.UI.WinForms.GunaDateTimePicker();
             this.date_CheckOut = new Guna.UI.WinForms.GunaDateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -69,6 +68,7 @@
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txt_user = new Guna.UI.WinForms.GunaTextBox();
             this.panel_control.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_exit)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -160,25 +160,6 @@
             this.gunaLabel4.Size = new System.Drawing.Size(86, 23);
             this.gunaLabel4.TabIndex = 17;
             this.gunaLabel4.Text = "Ngày trả :";
-            // 
-            // txt_user
-            // 
-            this.txt_user.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_user.BaseColor = System.Drawing.Color.White;
-            this.txt_user.BorderColor = System.Drawing.Color.Silver;
-            this.txt_user.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_user.FocusedBaseColor = System.Drawing.Color.White;
-            this.txt_user.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
-            this.txt_user.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_user.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_user.ForeColor = System.Drawing.Color.Black;
-            this.txt_user.Location = new System.Drawing.Point(148, 89);
-            this.txt_user.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txt_user.Name = "txt_user";
-            this.txt_user.PasswordChar = '\0';
-            this.txt_user.Size = new System.Drawing.Size(272, 47);
-            this.txt_user.TabIndex = 18;
             // 
             // Date_CheckIn
             // 
@@ -805,6 +786,25 @@
             this.bunifuFlatButton4.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // txt_user
+            // 
+            this.txt_user.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_user.BaseColor = System.Drawing.Color.White;
+            this.txt_user.BorderColor = System.Drawing.Color.Silver;
+            this.txt_user.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_user.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_user.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(120)))), ((int)(((byte)(215)))));
+            this.txt_user.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_user.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_user.ForeColor = System.Drawing.Color.Black;
+            this.txt_user.Location = new System.Drawing.Point(148, 89);
+            this.txt_user.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_user.Name = "txt_user";
+            this.txt_user.PasswordChar = '\0';
+            this.txt_user.Size = new System.Drawing.Size(272, 47);
+            this.txt_user.TabIndex = 18;
+            // 
             // frmBookRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -851,7 +851,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaTextBox txt_user;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private Guna.UI.WinForms.GunaDateTimePicker date_CheckOut;
@@ -881,5 +880,6 @@
         private Guna.UI.WinForms.GunaDataGridView showDataRoom;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox6;
         private Guna.UI.WinForms.GunaLabel gunaLabel11;
+        private Guna.UI.WinForms.GunaTextBox txt_user;
     }
 }

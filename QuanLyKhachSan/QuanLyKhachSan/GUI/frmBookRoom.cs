@@ -35,6 +35,7 @@ namespace QuanLyKhachSan.GUI
                 adap.Fill(data_emptyroom);
                 showDataRoom.DataSource = data_emptyroom;
             }
+            
         }
         string check_MaDatPhong()
         {
@@ -58,7 +59,11 @@ namespace QuanLyKhachSan.GUI
 
         private void frmBookRoom_Load(object sender, EventArgs e)
         {
-
+            Date_CheckIn.Format = DateTimePickerFormat.Custom;
+            date_CheckOut.Format = DateTimePickerFormat.Custom;
+            Date_CheckIn.CustomFormat = "dd/MM/yyyy";
+            date_CheckOut.CustomFormat = "dd/MM/yyyy";
+            load();
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
