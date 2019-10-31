@@ -25,7 +25,16 @@ namespace QuanLyKhachSan.GUI
         }
         void load()
         {
-
+            DataTable data_emptyroom = new DataTable();
+            using (conn = new SqlConnection(cnn.getConnectionString(1)))
+            {
+                query = "USP_LoadEmptyRoom";
+                cmd = new SqlCommand(query, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                adap = new SqlDataAdapter(cmd);
+                adap.Fill(data_emptyroom);
+                showDataRoom.DataSource = data_emptyroom;
+            }
         }
         private void gunaLabel2_Click(object sender, EventArgs e)
         {
