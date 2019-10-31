@@ -92,7 +92,7 @@
             this.panel_control.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.panel_control.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(154)))), ((int)(((byte)(167)))));
             this.panel_control.Location = new System.Drawing.Point(0, 0);
-            this.panel_control.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_control.Margin = new System.Windows.Forms.Padding(4);
             this.panel_control.Name = "panel_control";
             this.panel_control.Quality = 10;
             this.panel_control.Size = new System.Drawing.Size(1328, 44);
@@ -105,7 +105,7 @@
             this.btn_exit.Image = ((System.Drawing.Image)(resources.GetObject("btn_exit.Image")));
             this.btn_exit.ImageActive = null;
             this.btn_exit.Location = new System.Drawing.Point(1273, 5);
-            this.btn_exit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_exit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(47, 33);
             this.btn_exit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -190,7 +190,7 @@
             this.Date_CheckIn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Date_CheckIn.ForeColor = System.Drawing.Color.Black;
             this.Date_CheckIn.Location = new System.Drawing.Point(552, 89);
-            this.Date_CheckIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Date_CheckIn.Margin = new System.Windows.Forms.Padding(4);
             this.Date_CheckIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.Date_CheckIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.Date_CheckIn.Name = "Date_CheckIn";
@@ -213,7 +213,7 @@
             this.date_CheckOut.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.date_CheckOut.ForeColor = System.Drawing.Color.Black;
             this.date_CheckOut.Location = new System.Drawing.Point(941, 89);
-            this.date_CheckOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.date_CheckOut.Margin = new System.Windows.Forms.Padding(4);
             this.date_CheckOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.date_CheckOut.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.date_CheckOut.Name = "date_CheckOut";
@@ -236,9 +236,9 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
             this.groupBox1.Location = new System.Drawing.Point(57, 165);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(477, 486);
             this.groupBox1.TabIndex = 21;
             this.groupBox1.TabStop = false;
@@ -376,7 +376,7 @@
             this.showDataRoom.EnableHeadersVisualStyles = false;
             this.showDataRoom.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(234)))), ((int)(((byte)(238)))));
             this.showDataRoom.Location = new System.Drawing.Point(0, 28);
-            this.showDataRoom.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.showDataRoom.Margin = new System.Windows.Forms.Padding(5);
             this.showDataRoom.Name = "showDataRoom";
             this.showDataRoom.ReadOnly = true;
             this.showDataRoom.RowHeadersVisible = false;
@@ -429,9 +429,9 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.ForeColor = System.Drawing.Color.Black;
             this.groupBox2.Location = new System.Drawing.Point(564, 165);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(705, 486);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
@@ -511,7 +511,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(531, 302);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(51, 24);
             this.radioButton1.TabIndex = 32;
@@ -523,7 +523,7 @@
             this.Nam.AutoSize = true;
             this.Nam.Checked = true;
             this.Nam.Location = new System.Drawing.Point(420, 302);
-            this.Nam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Nam.Margin = new System.Windows.Forms.Padding(4);
             this.Nam.Name = "Nam";
             this.Nam.Size = new System.Drawing.Size(65, 24);
             this.Nam.TabIndex = 31;
