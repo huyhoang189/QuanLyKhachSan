@@ -36,6 +36,11 @@ namespace QuanLyKhachSan.GUI
                 showDataRoom.DataSource = data_emptyroom;
             }
         }
+        string check_MaDatPhong()
+        {
+            string MaDatPhong = "";
+            return MaDatPhong;
+        }
         private void gunaLabel2_Click(object sender, EventArgs e)
         {
 
@@ -52,6 +57,11 @@ namespace QuanLyKhachSan.GUI
         }
 
         private void frmBookRoom_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
 
         }
