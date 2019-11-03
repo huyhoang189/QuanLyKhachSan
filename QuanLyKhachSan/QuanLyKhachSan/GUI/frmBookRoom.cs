@@ -40,7 +40,32 @@ namespace QuanLyKhachSan.GUI
         string check_MaDatPhong()
         {
             string MaDatPhong = "";
+            DataTable dt_bookroom = new DataTable();
+            using (conn = new SqlConnection(cnn.getConnectionString(1)))
+            {
+                query = "select *from BookRoom order by ID DESC";
+                adap = new SqlDataAdapter(query, conn);
+                adap.Fill(dt_bookroom);
+             }
+            if (dt_bookroom.Rows.Count == 0) return "1";
+            string temp = dt_bookroom.Rows[0]["ID"].ToString();
+            int Id_phong = Convert.ToInt32(temp);
+            Id_phong++;
+            MaDatPhong = Id_phong.ToString();
             return MaDatPhong;
+        }
+        bool check_Customer(string CMND)
+        {
+            bool check=true;
+            query = "select *from Customer where IDCard='"+CMND+"'";
+            DataTable dt_customer = new DataTable();
+            using (conn = new SqlConnection(cnn.getConnectionString(1)))
+            {
+                adap = new SqlDataAdapter(query, conn);
+                adap.Fill(dt_customer);
+            }
+            if (dt_customer.Rows.Count == 0) return false;
+            return true;
         }
         private void gunaLabel2_Click(object sender, EventArgs e)
         {
@@ -63,6 +88,7 @@ namespace QuanLyKhachSan.GUI
             date_CheckOut.Format = DateTimePickerFormat.Custom;
             Date_CheckIn.CustomFormat = "dd/MM/yyyy";
             date_CheckOut.CustomFormat = "dd/MM/yyyy";
+            txt_MaDatPhong.Text = check_MaDatPhong();
             load();
         }
 
