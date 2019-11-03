@@ -110,7 +110,7 @@ namespace QuanLyKhachSan.GUI
             {
                 if(check_Customer(txt_CMND.Text.Trim())==false)
                 {
-                    query = "USP_InsertCustomer";
+                    query = "USP_InsertCustomer"; 
                     using (conn = new SqlConnection(cnn.getConnectionString(1)))
                     {
                         cmd = new SqlCommand(query, conn);
