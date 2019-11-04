@@ -113,6 +113,7 @@ namespace QuanLyKhachSan.GUI
                     query = "USP_InsertCustomer"; 
                     using (conn = new SqlConnection(cnn.getConnectionString(1)))
                     {
+
                         cmd = new SqlCommand(query, conn);
                         cmd.Parameters.AddWithValue("@customerName", txt_HoTen.Text);
                         cmd.Parameters.AddWithValue("@idCustomerType", 1);
