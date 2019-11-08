@@ -37,6 +37,7 @@ namespace QuanLyKhachSan.GUI
             }
             
         }
+        
         string check_MaDatPhong()
         {
             string MaDatPhong = "";
@@ -206,6 +207,7 @@ namespace QuanLyKhachSan.GUI
                         cmd.ExecuteNonQuery();
                         conn.Close();
                         MessageBox.Show("Đặt phòng thành công!");
+                        load();
                     }
                 }
 
