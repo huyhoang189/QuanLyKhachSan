@@ -15,7 +15,7 @@ namespace QuanLyKhachSan.GUI
 {
     public partial class frmLogin : Form
     {
-        internal static int checkConnectionString;
+        internal static int checkConnectionString = 0;
         internal static int checkLogin;
         public frmLogin()
         {
@@ -47,7 +47,7 @@ namespace QuanLyKhachSan.GUI
                     frmHome a = new frmHome();
                     this.Hide();
                     a.ShowDialog();
-                    this.Close();
+                   
                 }
 
                 else MessageBox.Show("Lỗi . Mật khẩu không đúng");
@@ -103,6 +103,16 @@ namespace QuanLyKhachSan.GUI
         {
             frm_registration a = new frm_registration();
             a.ShowDialog();
+        }
+
+        private void gunaPictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

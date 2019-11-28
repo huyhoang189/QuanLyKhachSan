@@ -26,7 +26,7 @@ namespace QuanLyKhachSan.GUI
         void load()
         {
             DataTable data_emptyroom = new DataTable();    
-            using (conn = new SqlConnection(cnn.getConnectionString(1)))
+            using (conn = new SqlConnection(cnn.getConnectionString(frmLogin.checkConnectionString)))
             {
                 query = "USP_LoadEmptyRoom"; 
                 cmd = new SqlCommand(query, conn);
@@ -43,7 +43,7 @@ namespace QuanLyKhachSan.GUI
         {
             string MaDatPhong = "";
             DataTable dt_bookroom = new DataTable();
-            using (conn = new SqlConnection(cnn.getConnectionString(1)))
+            using (conn = new SqlConnection(cnn.getConnectionString(frmLogin.checkConnectionString)))
             {
                 conn.Open();
                 query = "select *from BookRoom order by ID DESC";
@@ -62,7 +62,7 @@ namespace QuanLyKhachSan.GUI
             bool check=true;
             query = "select *from Customer where IDCard='"+CMND+"'";
             DataTable dt_customer = new DataTable();
-            using (conn = new SqlConnection(cnn.getConnectionString(1)))
+            using (conn = new SqlConnection(cnn.getConnectionString(frmLogin.checkConnectionString)))
             {
                 adap = new SqlDataAdapter(query, conn);
                 adap.Fill(dt_customer);
@@ -118,7 +118,7 @@ namespace QuanLyKhachSan.GUI
             DataTable dt_customer = new DataTable();
             try
             {
-                using (conn = new SqlConnection(cnn.getConnectionString(1)))
+                using (conn = new SqlConnection(cnn.getConnectionString(frmLogin.checkConnectionString)))
                 {
                     query = "selecr *from Customer order by ID desc";
                     conn.Open();
@@ -161,7 +161,7 @@ namespace QuanLyKhachSan.GUI
                     try
                     {
                         query = "USP_InsertCustomer_";
-                        using (conn = new SqlConnection(cnn.getConnectionString(1)))
+                        using (conn = new SqlConnection(cnn.getConnectionString(frmLogin.checkConnectionString)))
                         {
                             conn.Open();
                             cmd = new SqlCommand(query, conn);
@@ -194,7 +194,7 @@ namespace QuanLyKhachSan.GUI
                 string id_Room = showDataRoom.Rows[index-1].Cells["ID"].Value.ToString();
                 try
                 {
-                    using (conn = new SqlConnection(cnn.getConnectionString(1)))
+                    using (conn = new SqlConnection(cnn.getConnectionString(frmLogin.checkConnectionString)))
                     {
                         query = "insert_BookRoom";
                         conn.Open();
