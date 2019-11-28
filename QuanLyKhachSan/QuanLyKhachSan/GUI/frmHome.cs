@@ -18,7 +18,7 @@ namespace QuanLyKhachSan.GUI
         SqlConnection conn;
         ConnectionString cnn = new ConnectionString();
         SqlDataAdapter adap;
-        string query = "";
+        string query = "";     
         int WIDTH_MENU_MAX = 182;
         int WIDTH_MENU_MIN = 50;
         public frmHome()
